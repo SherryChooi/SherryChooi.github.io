@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sherry Choi</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<style>
+		strong {
+			color: #000000 !important; 
+			/* Forces all bold text to be Pitch Black */
+		}
+		p {
+			color: #676767;
+		}
+		h3 {
+			color: #262626;
+		}
+		.work-item p {
+        font-size: 1.02em;   
+        color: #555555;     /* Ensures it is readable */
+   		}
+		.title-box {
+		background-color: #ffffff;     
+        padding: 0.5em 0em;          
+		border-bottom: 3px solid #463e37;
+        display: inline-block;        
+        width: 100%;
+		text-align: left;
+		line-height: 0.5;
+		}
+		#header {
+        position: relative;      /* Moves it into the normal flow */
+        width: 100%;            /* Stretches it across the top */
+        height: auto;           /* Let it grow with the content */
+        top: auto;
+        left: auto;
+        padding: 4em 2em;       /* Adds space (Top/Bottom, Left/Right) */
+        text-align: center;     /* Centers your name and photo */
+        
+        /* Optional: Keep the template background image */
+        background-attachment: scroll; 
+		}
+		#header .inner {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+		}
+		#main {
+			flex: 1 0 auto;
+			margin-left: 0;         
+			padding: 4em;          
+			max-width: auto;      
+			margin: 0 auto;        
+		}
+		
+		#page-footer {
+		color: #343333;
+        flex-shrink: 0;
+		display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        clear: both !important;
+        padding: 4em 4em 2em 4em !important;
+        text-align: left !important;
+        margin-top: 2em !important;    
+		background-image: url("images/thumbs/01.jpg") ;
+        background-size: cover !important;      /* Stretches image to fill width */
+        background-position: center !important; /* Centers the image */
+        background-repeat: no-repeat !important;         
+    }
+		#page-footer .icons a {
+			color: #343333
+		}
+
+		#page-footer .copyright a{
+			color: #343333
+		}
+
+		ul.actions a.button:hover {
+        color: #343333 !important;        /* SaddleBrown Text */
+        border-color: #343333 !important; /* SaddleBrown Border */
+    }
+
+    	ul.actions a.button:active {
+        color: #343333 !important;
+        border-color: #343333 !important;
+        background-color: rgba(139, 69, 19, 0.1) !important; /* Optional: Faint brown tint background */
+    }
+
+		@media screen and (max-width: 980px) {
+        #header {
+            background-attachment: scroll; /* Fixes mobile scrolling glitch */
+        }
+        #main {
+            padding: 2em 1em; /* Less padding on phones */
+        }
+    }
+</style>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/others/main1.jpg" alt="" /></a>					
+					<h1 style=" font-family: 'Noto Sans', sans-serif; font-size:1.5em; color: #edecec;">Sherry Choi</h1>
+					<p style="margin-top: 0.5em; font-size: 1.1em; letter-spacing: 0.02em; font-family: 'Noto Sans', sans-serif; color: #d8d8d8;">
+  					  Mechanical Engineering <br>
+					  - RICE '27
+					</p>	 
+				</div>
+			</header>
+		
+		<!-- Main -->
+			<div id="main">
+			<header class="major">
+				<ul class="actions fit">
+   					 <li><a href="index.html" class="button fit icon solid fa-home">Home</a></li>
+					 <li><a href="work.html" class="button fit icon solid fa-briefcase">Work Experience</a></li>
+  				     <li><a href="rice.html" class="button fit icon solid fa-cogs">Academic Projects</a></li>
+  				     <li><a href="others.html" class="button fit icon solid fa-users">Beyond Engineering</a></li>
+					</ul>
+					<br/>
+						</br>
+							<h3 style="font-weight: bold; font-size: 2em; margin-bottom: 0; color:#343333;  font-family: 'Noto Sans', sans-serif;"> 
+    						Work Experience</h3>
+							<br/>
+							</header>
+				<!-- One -->
+					<div data-aos="fade-up">
+						<header class="major" >
+						
+							<h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0;"> 
+    						Robotic Navigation for Neurosurgery </h3>
+							<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+							Robot Development Intern 
+							<span style="display: block; color: #444;">
+       						 UTHealth Houston
+   							 </span>
+							<h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+						    June 2024 - Nov 2024 </h4>	
+						</header>
+						<p style="color: #676767; font-size: 1.07em;" >
+							&bull; <strong style="font-weight: bold;">Automated Coordinate Registration:</strong> Developed a Python-based algorithm to transform MRI targets into real-world table coordinates. This eliminated manual marking, reducing human error and improving spatial accuracy by 15%.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Real-Time Trajectory Planning:</strong> Built navigation pipelines that allow the robotic arm to autonomously move to surgical targets, significantly decreasing setup time and streamlining the research workflow.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Surgeon-Centric Interface:</strong> Designed an intuitive UI to simplify robotic control during high-stakes procedures. I collaborated directly with neurosurgeons to iterate on the design, ensuring the interface enhanced clinical decision-making rather than adding complexity.
+					<div class="row">					
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/tbbl/tbbl1.jpg" class="image fit thumb"><img src="images/tbbl/tbbl1.jpg" alt="" /></a>
+								<h3>Set Up</h3>
+								<p> Integrating the Python registration algorithm into the robotic control system.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/tbbl/tbbl4.PNG" class="image fit thumb"><img src="images/tbbl/tbbl4.PNG" alt="" /></a>
+								<h3>User Interface</h3>
+								<p>Designing an intuitive control panel for registration and trajectory execution.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/tbbl/tbbl6.jpg" class="image fit thumb"><img src="images/tbbl/tbbl6.jpg" alt="" /></a>
+								<h3>Trajectory Data Display</h3>
+								<p>Showing calculated rotation and translation values for trajectory verification.</p>
+							</article>	
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/tbbl/xarm.png" class="image fit thumb"><img src="images/tbbl/xarm.png" alt="" /></a>
+								<h3>xArm Robotic Platform</h3>
+								<p>A 6-DOF robotic arm providing precise positioning for neurosurgical experiments.</p>
+							</article>						
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/tbbl/tbbl5.JPG" class="image fit thumb"><img src="images/tbbl/tbbl5.JPG" alt="" /></a>
+								<h3>Registration & Trajectory</h3>
+								<p>Registering the physical head position using fiducials to generate accurate robotic paths.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/tbbl/tbbl2.jpg" class="image fit thumb"><img src="images/tbbl/tbbl2.jpg" alt="" /></a>
+								<h3>Robotic-Assisted Neurosurgery</h3>
+								<p> Supporting live animal neurosurgery by automating probe alignment and navigation.</p>
+							</article>
+						</div>
+					</div>
+					
+				<!-- Two -->
+					<div data-aos="fade-up">
+						<header class="major" >
+							<br/>
+				</br>
+							<h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0;"> 
+    						Computational Simulation of Serpentine Structures </h3>
+							<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+							Undergraduate Researcher 
+							<span style="display: block; color: #444;">
+        					Computational Mechanics and Bioelectromagnetic Lab
+   							 </span>
+							<h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+						    May2025 - Present </h4>	
+						</header>
+						<p style="color: #676767; font-size: 1.07em;" >
+							&bull; <strong style="font-weight: bold;">Finite Element Analysis (FEA):</strong> Conducted simulations using ABAQUS and COMSOL to parametrically model magnesium serpentine ribbons, analyzing how varying arc curvature affects stress concentration and stiffness.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Fabrication & Mechanical Testing:</strong> Built navigation pipelines that allow the robotic arm to autonomously move to surgical targets, significantly decreasing setup time and streamlining the research workflow.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Design Optimization:</strong> Establishing geometric design principles for stretchable, radio-frequency antennas, identifying the specific waveform architectures needed to maintain mechanical integrity in implantable devices while it safely resorbs.					
+						<div class="row">	
+							<article class="col-12 col-12-xsmall work-item">
+								<a href="images/serpentine/serp0.png" class="image fit thumb"><img src="images/serpentine/serp0.png" alt="" /></a>
+								<h3>Finite Element Analysis (FEA)</h3>
+								<p> COMSOL simulations visualizing stress concentrations and strain distribution across the serpentine geometry. The models visualize Von Mises stress concentrations and strain distribution, allowing me to predict where the stretchable antenna will mechanically fail as the bioresorbable magnesium dissolves over time.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/serpentine/serp4.png" class="image fit thumb"><img src="images/serpentine/serp4.png" alt="" /></a>
+								<h3>Parametric Design (AutoCAD):</h3>
+								<p>2D drafts of serpentine ribbons with varying arc angles (180°–270°).</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/serpentine/serp1.jpg" class="image fit thumb"><img src="images/serpentine/serp1.jpg" alt="" /></a>
+								<h3>Rapid Prototyping</h3>
+								<p>Laser-cut wood models used for initial geometric verification and scaling before metal fabrication.</p>
+							</article>	
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/serpentine/serp6.JPG" class="image fit thumb"><img src="images/serpentine/serp6.JPG" alt="" /></a>
+								<h3>Magnesium Fabrication</h3>
+								<p>Final bioresorbable magnesium specimens manufactured via waterjet cutting for tensile testing and degradation studies.</p>
+							</article>						
+						</div>
+					</div>
+
+				<!-- Three -->	
+					<div data-aos="fade-up">
+					<header class="major" >
+						<br/>
+				</br>
+							<h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0;"> 
+    						Self-Healing Hydrogel Mechanical Characterization </h3>
+							<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+							Undergraduate Researcher 
+    						<span style="display: block; color: #444;">
+       						 Smart Materials and Sustainability Lab 
+   							 </span>
+							<h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+						    Jan 2024 - Present </h4>	
+						</header>
+						<p style="color: #676767; font-size: 1.07em;" >
+							&bull; <strong style="font-weight: bold;">Designing Resilient Materials:</strong> Studied how manipulating ionic environments affects material longevity, establishing a design framework for consumer products that can self-repair in moisture-rich or aquatic environments.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Systematic Mechanical Testing:</strong> Developing a reliable testing protocol required overcoming significant variables. Through iterative trial and error, I solved fabrication challenges, such as micro-bubbles, uneven drying, and grip slippage, to establish a standardized workflow for consistent data collection.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Performance Optimization:</strong> Optimized ionic compositions to achieve 200% tensile strength recovery, demonstrating that chemical structure can be tuned to maximize product durability.
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Academic Output:</strong> Contributed to a manuscript submitted to ACS Applied Polymer Materials and currently drafting a second paper on neutral self-healing polymers as the second author. 
+						<div class="row" >	
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/hydrogel/hydrogel0.png" class="image fit thumb"><img src="images/hydrogel/hydrogel0.png" alt="" /></a>
+								<h3>Mechanical Testing Cycle</h3>
+								<p>Testing protocol of how specimens are cut, healed, and subjected to tensile loading on an Instron machine to quantify recovery.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/hydrogel/hydrogel2.jpg" class="image fit thumb"><img src="images/hydrogel/hydrogel2.jpg" alt="" /></a>
+								<h3>Research Presentation</h3>
+								<p>Presenting at the Engineering and Computing Undergraduate Research Poster Symposium.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/hydrogel/hydrogel7.png" class="image fit thumb"><img src="images/hydrogel/hydrogel7.png" alt="" /></a>
+								<h3>Process Optimization</h3>
+								<p>Trial and error to solve experimental variables to create a consistent testing standard.</p>
+							</article>	
+						</div>
+					</div>
+
+				<!-- Four -->
+					<div data-aos="fade-up">
+						<header class="major" >
+							<br/>
+				</br>
+							<h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0;"> 
+    						Welding Lab Student Instructor </h3>
+							<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+							MECH 340 Industrial Process Lab
+							<span style="display: block; color: #444;">
+        					Rice University Mechanical Engineering Department
+   							 </span>
+							<h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+						    Sep 2025 - Dec 2025 </h4>	
+						</header>
+						<p style="color: #676767; font-size: 1.07em;">
+							&bull; <strong style="font-weight: bold;">Technical Training:</strong> 
+							Guided first-time students through MIG and Arc welding fundamentals, including machine setup, power settings, and hands-on welding techniques.							
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Safety & Shop Practices:</strong> Reinforced safety protocols, proper PPE, and responsible tool operation to maintain a safe learning environment.	
+							<br /><br />
+							&bull; <strong style="font-weight: bold;">Engineering Mentorship:</strong> 
+							Helped students build confidence working with welding equipment, providing one-on-one assistance and feedback to complete required class welds and projects.							
+						<div class="row" >	
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/weld/weld2.jpg" class="image fit thumb"><img src="images/weld/weld2.jpg" alt="" /></a>
+								<h3>MIG Welding</h3>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/weld/weld1.jpg" class="image fit thumb"><img src="images/weld/weld1.jpg" alt="" /></a>
+								<h3>Arc/Stick Welding </h3>
+								<p>behind the welding curtain</p>
+							</article>	
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/weld/weld3.jpg" class="image fit thumb"><img src="images/weld/weld3.jpg" alt="" /></a>
+								<h3>Suited up in full PPE </h3>
+								<p> for a stick welding demo </p>
+							</article>						
+						</div>
+					</div>
+				<br/>
+				</br>
+					<ul class="actions fit" data-aos="fade-up">
+   					 <li><a href="index.html" class="button fit icon solid fa-home">Home</a></li>
+					 <li><a href="work.html" class="button fit icon solid fa-briefcase">Work Experience</a></li>
+  				     <li><a href="rice.html" class="button fit icon solid fa-cogs">Academic Projects</a></li>
+  				     <li><a href="others.html" class="button fit icon solid fa-users">Beyond Engineering</a></li>
+					</ul>
+				</div>
+		<!-- Footer -->
+			<footer id="page-footer">
+    <div class="inner">
+        
+        <div data-aos="fade-up"> 
+            
+            <h2 style="font-weight:500; color: #343333; margin-bottom: 1.5em;">Get In Touch</h2>
+            
+            <ul class="labeled-icons" style="padding-left: 0; list-style: none;">
+                <li>
+                    <h3 class="icon brands fa-linkedin-in" style="color: #343333;"><span class="label">LinkedIn</span></h3>
+                    <a href="https://www.linkedin.com/in/sherry-choi-sc233/" style="color: #343333;">LinkedIn</a>
+                </li>
+                <li>
+                    <h3 class="icon solid fa-mobile-alt" style="color: #343333;"><span class="label">Phone</span></h3>
+                    <span style="color: #343333;">+1 281-814-0559</span>
+                </li>
+                <li>
+                    <h3 class="icon solid fa-envelope" style="color: #343333;"><span class="label">Email</span></h3>
+                    <a href="mailto:sc233@rice.edu" style="color: #343333;">sc233@rice.edu</a>
+                </li>
+				<li>
+                    <h3 class="icon brands fa-github" style="color: #343333;"><span class="label">GitHub</span></h3>
+                    <a href="https://github.com/SherryChooi" style="color: #343333;">GitHub</a>
+                </li>
+            </ul>
+
+            <ul class="copyright" style="padding-left: 0; margin-top: 3em; color: #343333;">
+                &copy; Sherry Choi | Design: <a href="http://html5up.net" style="color: #343333;">HTML5 UP</a>
+            </ul>
+
+        </div>
+    </div>
+</footer>
+
+			
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+			<script>
+				$(document).ready(function() {
+					// This targets your entire "main" div and activates the popup on images
+					$('#main').poptrox({
+						baseZIndex: 20000,
+						caption: function($a) {
+							// This grabs the text from the h3 tag immediately following the image
+							return $a.next('h3').text();
+						},
+						fadeSpeed: 300,
+						overlayColor: '#000000',
+						overlayOpacity: 0.6,
+						popupCloserText: '',
+						popupLoaderText: '',
+						selector: '.work-item a.image', // This looks for your specific link class
+						usePopupCaption: true,
+						usePopupDefaultStyling: false,
+						usePopupEasyClose: false,
+						usePopupNav: true,
+						windowMargin: 50
+					});
+				});
+			</script>
+
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script>
+			AOS.init({
+				duration: 1000,   // Animation lasts 1000ms (1 second)
+				once: true,       // Animation happens only once (doesn't reset when scrolling up)
+				offset: 100,      // Triggers 100px before the element is visible
+			});
+			</script>
+
+	</body>
+</html>
