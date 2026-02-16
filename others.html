@@ -11,41 +11,102 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 		<style>
-		strong {
-			color: #000000 
-		}
-		p {
-			color: #676767;
-		}
-		h3 {
-			color: #262626;
-		}
-		.work-item p {
-        font-size: 1.02em;   
-        color: #555555;     /* Ensures it is readable */
-   		}
-		.title-box {
-		background-color: #ffffff;     
-        padding: 0.5em 0em;          
-		border-bottom: 3px solid #463e37;
-        display: inline-block;        
-        width: 100%;
-		text-align: left;
-		line-height: 1.3;
-		}
+    strong {
+        color: #000000 !important; /* Forces all bold text to be Pitch Black */
+    }
+ /* --- 1. The Container --- */
+#sticky-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: #031130; /* Dark Blue */
+    border-bottom: 1px solid #031130;
+    padding: 0.75em 0; 
+    width: 100%;
+    margin: 0;
+}
+
+#sticky-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 !important; /* Removes default list spacing */
+    
+    display: flex;
+    justify-content: center; /* Horizontal Center */
+    align-items: center;     /* Vertical Center */
+    flex-wrap: wrap;
+}
+
+#sticky-nav li {
+    padding: 0 1.5em; /* Space between words */
+    border: none;
+    margin: 0;
+}
+
+#sticky-nav a {
+    text-decoration: none;
+    color: #e3dbdb !important; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: inline-block; 
+}
+
+#sticky-nav a:hover {
+    color: #aebce0 !important; /* Light Blue on hover */
+}
+
+/* Mobile Adjustment to make sure it looks good on phones */
+@media screen and (max-width: 736px) {
+    #sticky-nav {
+        margin: -2em -1em 2em -1em; /* Adjusts for smaller mobile padding */
+        width: calc(100% + 2em);
+    }
+    #sticky-nav li {
+    padding: 0 1em; /* Increased spacing so buttons don't touch */
+    border-left: none; /* Removed the dividers for a cleaner look */
+    display: inline-block; /* Ensures they sit side-by-side */
+    }
+}
+</style>
+	<style>
+        .project-item {
+            margin: 0 0 2em 0;
+        }
+        .project-item .image {
+            margin: 0 0 1em 0;
+            display: block; 
+        }
+        .project-item h3 {
+            font-size: 1em; 
+            margin: 0;
+        }
+        .project-item a {
+            border-bottom: none; 
+        }
 		#header {
         position: relative;      /* Moves it into the normal flow */
         width: 100%;            /* Stretches it across the top */
-        height: auto;           /* Let it grow with the content */
-        top: auto;
-        left: auto;
-        padding: 4em 2em;       /* Adds space (Top/Bottom, Left/Right) */
+        height: auto;
+        padding: 0;
+        aspect-ratio: 1536 / 502;
         text-align: center;     /* Centers your name and photo */
         
-        /* Optional: Keep the template background image */
-        background-attachment: scroll; 
-		}
+        background-image:url("images/header-bg.png");
+         background-size: cover !important;     /* Fills the box, might crop edges */
+         background-position: center center !important; /* Focuses on the middle of the image */
+         background-repeat: no-repeat !important;
+}
+		
 		#header .inner {
 			max-width: 100%;
 			margin: 0 auto;
@@ -55,47 +116,44 @@
 			flex-direction: column;
 		}
 		#main {
-			flex: 1 0 auto;
-			margin-left: 0;         
-			padding: 4em;          
-			max-width: auto;      
-			margin: 0 auto;        
+			
+            flex: 1 0 auto;
+            margin-left: 0;
+            max-width: 100%;  /* This unlocks the full width */
+            padding: 0em;
+            margin: 0 auto;
+
 		}
 		
+
 		#page-footer {
-		color: #343333;
+        color: #e3dbdb;
         flex-shrink: 0;
-		display: block !important;
+        display: block !important;
         position: relative !important;
         width: 100% !important;
         clear: both !important;
         padding: 4em 4em 2em 4em !important;
         text-align: left !important;
         margin-top: 2em !important;    
-		background-image: url("images/thumbs/01.jpg") ;
-        background-size: cover !important;      /* Stretches image to fill width */
-        background-position: center !important; /* Centers the image */
-        background-repeat: no-repeat !important;         
-    }
-		#page-footer .icons a {
-			color: #343333
-		}
-
-		#page-footer .copyright a{
-			color: #343333
-		}
+        
+        /* --- CHANGED SECTION --- */
+        background-image: none !important;  /* Removes the picture */
+        background-color: #031130 !important; /* Sets a solid color (Light Grey) */
+        /* ----------------------- */
+}
 
 		ul.actions a.button:hover {
-        color: #343333 !important;        /* SaddleBrown Text */
-        border-color: #343333 !important; /* SaddleBrown Border */
+        color: #aebce0 !important;        /* SaddleBrown Text */
+        border-color: #aebce0 !important; /* SaddleBrown Border */
     }
 
     	ul.actions a.button:active {
-        color: #343333 !important;
-        border-color: #343333 !important;
+        color: #aebce0 !important;
+        border-color: #aebce0 !important;
         background-color: rgba(139, 69, 19, 0.1) !important; /* Optional: Faint brown tint background */
     }
-
+	
 		@media screen and (max-width: 980px) {
         #header {
             background-attachment: scroll; /* Fixes mobile scrolling glitch */
@@ -104,34 +162,30 @@
             padding: 2em 1em; /* Less padding on phones */
         }
     }
-</style>
-	
+
+    </style>
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/others/main1.jpg" alt="" /></a>					
-					<h1 style=" font-family: 'Noto Sans', sans-serif; font-size:1.5em; color: #edecec;">Sherry Choi</h1>
-					<p style="margin-top: 0.5em; font-size: 1.1em; letter-spacing: 0.02em; font-family: 'Noto Sans', sans-serif; color: #d8d8d8;">
-  					  Mechanical Engineering <br>
-					  - RICE '27
-					</p>	 
-				</div>
-			</header>
+        <nav id="sticky-nav">
+            <ul class="actions" data-aos="fade-up">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html" >Professional Experience</a></li>
+                <li><a href="rice.html">Design Projects</a></li>
+                <li><a href="others.html">Beyond Engineering</a></li>
+            </ul>
+            </nav>  
+    <header id="header">
+        <div class="inner">      
+        </div>
+    </header>
 		
 		<!-- Main -->
 			<div id="main">
 			<header class="major">
-				<ul class="actions fit">
-   					 <li><a href="index.html" class="button fit icon solid fa-home">Home</a></li>
-					 <li><a href="work.html" class="button fit icon solid fa-briefcase">Professional Experience</a></li>
-  				     <li><a href="rice.html" class="button fit icon solid fa-cogs">Design Projects</a></li>
-  				     <li><a href="others.html" class="button fit icon solid fa-users">Beyond Engineering</a></li>
-					</ul>
 							<h3 style="font-weight: bold; font-size: 2em; margin-bottom: 0; color:#343333;  font-family: 'Noto Sans', sans-serif;"> 
-    						Beyond Engineering </h3>
+    						<br>
+								Beyond Engineering </h3>
 							<br/>
 							<p style="color: #676767; font-size: 1.1em;">
 							I believe that the best engineers are <strong>lifelong learners</strong> who actively <strong>step outside their comfort zones</strong>. My journey at Rice has been defined by a drive to <strong>explore the unknown</strong>, whether that means <strong>traveling to Kenya</strong> to understand <strong>global health challenges</strong>, stepping into the corporate world to explore <strong>infrastructure at HDR</strong>, or picking up an epee to <strong>coach the Fencing team</strong>.
@@ -252,41 +306,31 @@
 							</article>
 						</div>				
 					</div>
-
-				<br/>
-				</br>
-					<ul class="actions fit" data-aos="fade-up">
-   					 <li><a href="index.html" class="button fit icon solid fa-home">Home</a></li>
-					 <li><a href="work.html" class="button fit icon solid fa-briefcase">Professional Experience</a></li>
-  				     <li><a href="rice.html" class="button fit icon solid fa-cogs">Design Projects</a></li>
-  				     <li><a href="others.html" class="button fit icon solid fa-users">Beyond Engineering</a></li>
-					</ul>
-				</div>
-	
-		<!-- Footer -->
-			<footer id="page-footer">
+			</div>
+	<!-- Footer -->
+<footer id="page-footer">
     <div class="inner">
         
         <div data-aos="fade-up"> 
             
-            <h2 style="font-weight:500; color: #343333; margin-bottom: 1.5em;">Get In Touch</h2>
+            <h2 style="font-weight:500; margin-bottom: 1.5em;">Get In Touch</h2>
             
             <ul class="labeled-icons" style="padding-left: 0; list-style: none;">
                 <li>
-                    <h3 class="icon brands fa-linkedin-in" style="color: #343333;"><span class="label">LinkedIn</span></h3>
-                    <a href="https://www.linkedin.com/in/sherry-choi-sc233/" style="color: #343333;">LinkedIn</a>
+                    <h3 class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></h3>
+                    <a href="https://www.linkedin.com/in/sherry-choi-sc233/">LinkedIn</a>
                 </li>
                 <li>
-                    <h3 class="icon solid fa-mobile-alt" style="color: #343333;"><span class="label">Phone</span></h3>
-                    <span style="color: #343333;">+1 281-814-0559</span>
-                </li>	
+                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+                    <a> +1 281-814-0559</a>
+                </li>
                 <li>
-                    <h3 class="icon solid fa-envelope" style="color: #343333;"><span class="label">Email</span></h3>
-                    <a href="mailto:sc233@rice.edu" style="color: #343333;">sc233@rice.edu</a>
+                    <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                    <a href="mailto:sc233@rice.edu">sc233@rice.edu</a>
                 </li>
 				<li>
-                    <h3 class="icon brands fa-github" style="color: #343333;"><span class="label">GitHub</span></h3>
-                    <a href="https://github.com/SherryChooi" style="color: #343333;">GitHub</a>
+                    <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
+                    <a href="https://github.com/SherryChooi">GitHub</a>
                 </li>
             </ul>
 

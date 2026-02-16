@@ -11,11 +11,72 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 		<style>
     strong {
         color: #000000 !important; /* Forces all bold text to be Pitch Black */
     }
+ /* --- 1. The Container --- */
+#sticky-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: #031130; /* Dark Blue */
+    border-bottom: 1px solid #031130;
+    padding: 0.75em 0; 
+    width: 100%;
+    margin: 0;
+}
+
+#sticky-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 !important; /* Removes default list spacing */
+    
+    display: flex;
+    justify-content: center; /* Horizontal Center */
+    align-items: center;     /* Vertical Center */
+    flex-wrap: wrap;
+}
+
+#sticky-nav li {
+    padding: 0 1.5em; /* Space between words */
+    border: none;
+    margin: 0;
+}
+
+#sticky-nav a {
+    text-decoration: none;
+    color: #e3dbdb !important; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: inline-block; 
+}
+
+#sticky-nav a:hover {
+    color: #aebce0 !important; /* Light Blue on hover */
+}
+
+/* Mobile Adjustment to make sure it looks good on phones */
+@media screen and (max-width: 736px) {
+    #sticky-nav {
+        margin: -2em -1em 2em -1em; /* Adjusts for smaller mobile padding */
+        width: calc(100% + 2em);
+    }
+    #sticky-nav li {
+    padding: 0 1em; /* Increased spacing so buttons don't touch */
+    border-left: none; /* Removed the dividers for a cleaner look */
+    display: inline-block; /* Ensures they sit side-by-side */
+    }
+}
 </style>
 	<style>
         .project-item {
@@ -35,15 +96,17 @@
 		#header {
         position: relative;      /* Moves it into the normal flow */
         width: 100%;            /* Stretches it across the top */
-        height: auto;           /* Let it grow with the content */
-        top: auto;
-        left: auto;
-        padding: 4em 2em;       /* Adds space (Top/Bottom, Left/Right) */
+        height: auto;
+        padding: 0;
+        aspect-ratio: 1536 / 502;
         text-align: center;     /* Centers your name and photo */
         
-        /* Optional: Keep the template background image */
-        background-attachment: scroll; 
-		}
+        background-image:url("images/header-bg.png");
+         background-size: cover !important;     /* Fills the box, might crop edges */
+         background-position: center center !important; /* Focuses on the middle of the image */
+         background-repeat: no-repeat !important;
+}
+		
 		#header .inner {
 			max-width: 100%;
 			margin: 0 auto;
@@ -53,44 +116,41 @@
 			flex-direction: column;
 		}
 		#main {
-			flex: 1 0 auto;
-			margin-left: 0;         
-			padding: 4em;          
-			max-width: auto;      
-			margin: 0 auto;        
+			
+            flex: 1 0 auto;
+            margin-left: 0;
+            max-width: 100%;  /* This unlocks the full width */
+            padding: 0em;
+            margin: 0 auto;
+
 		}
 		
+
 		#page-footer {
-		color: #343333;
+        color: #e3dbdb;
         flex-shrink: 0;
-		display: block !important;
+        display: block !important;
         position: relative !important;
         width: 100% !important;
         clear: both !important;
         padding: 4em 4em 2em 4em !important;
         text-align: left !important;
         margin-top: 2em !important;    
-		background-image: url("images/thumbs/01.jpg") ;
-        background-size: cover !important;      /* Stretches image to fill width */
-        background-position: center !important; /* Centers the image */
-        background-repeat: no-repeat !important;         
-    }
-		#page-footer .icons a {
-			color: #343333
-		}
-
-		#page-footer .copyright a{
-			color: #343333
-		}
+        
+        /* --- CHANGED SECTION --- */
+        background-image: none !important;  /* Removes the picture */
+        background-color: #031130 !important; /* Sets a solid color (Light Grey) */
+        /* ----------------------- */
+}
 
 		ul.actions a.button:hover {
-        color: #343333 !important;        /* SaddleBrown Text */
-        border-color: #343333 !important; /* SaddleBrown Border */
+        color: #aebce0 !important;        /* SaddleBrown Text */
+        border-color: #aebce0 !important; /* SaddleBrown Border */
     }
 
     	ul.actions a.button:active {
-        color: #343333 !important;
-        border-color: #343333 !important;
+        color: #aebce0 !important;
+        border-color: #aebce0 !important;
         background-color: rgba(139, 69, 19, 0.1) !important; /* Optional: Faint brown tint background */
     }
 	
@@ -107,37 +167,31 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/others/main1.jpg" alt="" /></a>					
-					<h1 style=" font-family: 'Noto Sans', sans-serif; font-size:1.5em; color: #edecec;">Sherry Choi</h1>
-					<p style="margin-top: 0.5em; font-size: 1.1em; letter-spacing: 0.02em; font-family: 'Noto Sans', sans-serif; color: #d8d8d8;">
-  					  Mechanical Engineering <br>
-					  - RICE '27
-					</p>
-				</div>
-			</header>
-
+        <nav id="sticky-nav">
+            <ul class="actions" data-aos="fade-up">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html" >Professional Experience</a></li>
+                <li><a href="rice.html">Design Projects</a></li>
+                <li><a href="others.html">Beyond Engineering</a></li>
+            </ul>
+            </nav>  
+    <header id="header">
+        <div class="inner">
+            
+        </div>
+    </header>
 		<!-- Main -->
 			<div id="main">
-
-				<!-- One -->
-				
-					<section id="one">
-					 <ul class="actions fit" data-aos="fade-up">
-   					 <li><a href="index.html" class="button fit icon solid fa-home">Home</a></li>
-					 <li><a href="work.html" class="button fit icon solid fa-briefcase">Professional Experience</a></li>
-  				     <li><a href="rice.html" class="button fit icon solid fa-cogs">Design Projects</a></li>
-  				     <li><a href="others.html" class="button fit icon solid fa-users">Beyond Engineering</a></li>
-				</ul>
-				<br/>
-						</br>
 						<header class="major">
+                            <br>
+                        </br>
 							<h2 style="font-weight: bold; font-size: 2em; margin-bottom: 0.01; color:#343333;  font-family: 'Noto Sans', sans-serif;"> 
     						About Me</h2>
 						</header>
-						<p style="color: #676767; font-size: 1.2em;">Hello! My name is <strong>Sherry Choi</strong> and I am a student at <strong>Rice University ('27)</strong> with a Major in <strong>Mechanical Engineering </strong>and a Minor in <strong>Engineering Design</strong>.
+                    <span style="float: left; margin: 0 2em 1em 0; border: 0; padding: 0; background: none; box-shadow: none;">
+                        <img src="images/others/main1.jpg" alt="" style="border-radius: 50%; width: 10em; display: block;" />
+                    </span>
+                        <p style="color: #676767; font-size: 1.2em;">Hello! My name is <strong>Sherry Choi</strong> and I am a student at <strong>Rice University ('27)</strong> with a Major in <strong>Mechanical Engineering </strong>and a Minor in <strong>Engineering Design</strong>.
 							My interests lie in the intersection of <strong>Product Design</strong> and <strong> Biomedical Design</strong>. I am passionate about designing devices around the user, ensuring the consumer's point of view is central to the engineering process.
 							<br /><br />
 							In total, I have 2.5 years of research and internship experience. I started in the MedTech sector as a <strong>Robot Development Intern at UTHealth</strong>. From there, I pivoted to research to better understand the materials that define the future of product interaction.
@@ -171,324 +225,6 @@
 					</section>
 				</div>
 
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				 -->
-
 			</div>
 
 		<!-- Footer -->
@@ -497,24 +233,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         
         <div data-aos="fade-up"> 
             
-            <h2 style="font-weight:500; color: #343333; margin-bottom: 1.5em;">Get In Touch</h2>
+            <h2 style="font-weight:500; margin-bottom: 1.5em;">Get In Touch</h2>
             
             <ul class="labeled-icons" style="padding-left: 0; list-style: none;">
                 <li>
-                    <h3 class="icon brands fa-linkedin-in" style="color: #343333;"><span class="label">LinkedIn</span></h3>
-                    <a href="https://www.linkedin.com/in/sherry-choi-sc233/" style="color: #343333;">LinkedIn</a>
+                    <h3 class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></h3>
+                    <a href="https://www.linkedin.com/in/sherry-choi-sc233/">LinkedIn</a>
                 </li>
                 <li>
-                    <h3 class="icon solid fa-mobile-alt" style="color: #343333;"><span class="label">Phone</span></h3>
-                    <span style="color: #343333;">+1 281-814-0559</span>
+                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+                    <a> +1 281-814-0559</a>
                 </li>
                 <li>
-                    <h3 class="icon solid fa-envelope" style="color: #343333;"><span class="label">Email</span></h3>
-                    <a href="mailto:sc233@rice.edu" style="color: #343333;">sc233@rice.edu</a>
+                    <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                    <a href="mailto:sc233@rice.edu">sc233@rice.edu</a>
                 </li>
 				<li>
-                    <h3 class="icon brands fa-github" style="color: #343333;"><span class="label">GitHub</span></h3>
-                    <a href="https://github.com/SherryChooi" style="color: #343333;">GitHub</a>
+                    <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
+                    <a href="https://github.com/SherryChooi">GitHub</a>
                 </li>
             </ul>
 
