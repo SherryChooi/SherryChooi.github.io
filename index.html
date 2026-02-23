@@ -1,19 +1,14 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Sherry Choi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <head>
+        <title>Sherry Choi</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-		<style>
+        <style>
     strong {
         color: #000000 !important; /* Forces all bold text to be Pitch Black */
     }
@@ -78,7 +73,7 @@
     }
 }
 </style>
-	<style>
+    <style>
         .project-item {
             margin: 0 0 2em 0;
         }
@@ -93,7 +88,7 @@
         .project-item a {
             border-bottom: none; 
         }
-		#header {
+        #header {
         position: relative;      /* Moves it into the normal flow */
         width: 100%;            /* Stretches it across the top */
         height: auto;
@@ -106,27 +101,27 @@
          background-position: center center !important; /* Focuses on the middle of the image */
          background-repeat: no-repeat !important;
 }
-		
-		#header .inner {
-			max-width: 100%;
-			margin: 0 auto;
-		}
-		body{
-			display: flex;
-			flex-direction: column;
-		}
-		#main {
-			
+        
+        #header .inner {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #main {
+            
             flex: 1 0 auto;
             margin-left: 0;
             max-width: 100%;  /* This unlocks the full width */
             padding: 0em;
             margin: 0 auto;
 
-		}
-		
+        }
+        
 
-		#page-footer {
+        #page-footer {
         color: #e3dbdb;
         flex-shrink: 0;
         display: block !important;
@@ -143,18 +138,18 @@
         /* ----------------------- */
 }
 
-		ul.actions a.button:hover {
+        ul.actions a.button:hover {
         color: #aebce0 !important;        /* SaddleBrown Text */
         border-color: #aebce0 !important; /* SaddleBrown Border */
     }
 
-    	ul.actions a.button:active {
+        ul.actions a.button:active {
         color: #aebce0 !important;
         border-color: #aebce0 !important;
         background-color: rgba(139, 69, 19, 0.1) !important; /* Optional: Faint brown tint background */
     }
-	
-		@media screen and (max-width: 980px) {
+    
+        @media screen and (max-width: 980px) {
         #header {
             background-attachment: scroll; /* Fixes mobile scrolling glitch */
         }
@@ -163,9 +158,112 @@
         }
     }
 
+    /* ========================================= */
+    /* --- NEW PORTFOLIO MAIN PAGE STYLES --- */
+    /* ========================================= */
+    
+    .portfolio-intro {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #333;
+        max-width: 1000px;
+        margin: 0 auto;
+        line-height: 1.6;
+        padding: 0 2em 2em 2em;
+    }
+
+    .hero-section {
+        display: flex;
+        align-items: center;
+        gap: 3em;
+        margin-bottom: 3em;
+        margin-top: 2em;
+    }
+    .hero-img {
+        border-radius: 50%;
+        width: 14em;
+        height: 14em;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        flex-shrink: 0;
+    }
+    .hero-text h1 {
+        margin: 0 0 0.3em 0;
+        font-size: 2.5em;
+        color: #111;
+        font-weight: bold;
+    }
+    .hero-text p {
+        font-size: 1.25em;
+        color: #555;
+        margin: 0;
+    }
+
+    .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* STRICTLY 3 COLUMNS */
+        gap: 1.5em;
+        margin-bottom: 2.5em;
+    }
+    
+    .experience-card {
+        background: #f8f9fa;
+        padding: 1.5em;
+        border-radius: 8px;
+        border-top: 4px solid #00205B;
+        display: flex;
+        flex-direction: column; /* Allows content to stack and push skills to bottom */
+    }
+    .experience-card h3 {
+        margin-top: 0;
+        color: #00205B;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 0.8em;
+    }
+    .experience-card ul {
+        padding-left: 1.2em;
+        margin-bottom: 1.5em;
+        font-size: 0.95em;
+        color: #444;
+    }
+    .experience-card li {
+        margin-bottom: 0.6em;
+    }
+    
+    /* Dedicated Skills Section inside the card */
+    .skills-section {
+        margin-top: auto; /* Pushes the skills block to the very bottom */
+        padding-top: 1em;
+        border-top: 1px solid #ddd; /* Subtle divider line */
+        font-size: 0.85em;
+        color: #555;
+        line-height: 1.5;
+    }
+    .skills-section strong {
+        color: #00205B !important;
+        display: block;
+        margin-bottom: 0.3em;
+        font-size: 1.05em;
+    }
+
+    /* Mobile overrides */
+    @media (max-width: 850px) {
+        .experience-grid {
+            grid-template-columns: 1fr; /* STRICTLY 1 COLUMN ON SMALL SCREENS */
+        }
+        .hero-section {
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-img {
+            width: 10em;
+            height: 10em;
+        }
+    }
+
     </style>
-	</head>
-	<body class="is-preload">
+    </head>
+    <body class="is-preload">
 
         <nav id="sticky-nav">
             <ul class="actions" data-aos="fade-up">
@@ -180,56 +278,87 @@
             
         </div>
     </header>
-		<!-- Main -->
-			<div id="main">
-						<header class="major">
-                            <br>
-                        </br>
-							<h2 style="font-weight: bold; font-size: 2em; margin-bottom: 0.01; color:#343333;  font-family: 'Noto Sans', sans-serif;"> 
-    						About Me</h2>
-						</header>
-                    <span style="float: left; margin: 0 2em 1em 0; border: 0; padding: 0; background: none; box-shadow: none;">
-                        <img src="images/others/main1.jpg" alt="" style="border-radius: 50%; width: 10em; display: block;" />
-                    </span>
-                        <p style="color: #676767; font-size: 1.2em;">Hello! My name is <strong>Sherry Choi</strong> and I am a student at <strong>Rice University ('27)</strong> with a Major in <strong>Mechanical Engineering </strong>and a Minor in <strong>Engineering Design</strong>.
-							My interests lie in the intersection of <strong>Product Design</strong> and <strong> Biomedical Design</strong>. I am passionate about designing devices around the user, ensuring the consumer's point of view is central to the engineering process.
-							<br /><br />
-							In total, I have 2.5 years of research and internship experience. I started in the MedTech sector as a <strong>Robot Development Intern at UTHealth</strong>. From there, I pivoted to research to better understand the materials that define the future of product interaction.
-							Currently, I am studying <strong>self-healing polymers</strong> as application materials for future durable products, and analyzing <strong>serpentine conductive traces</strong> to advance the mechanical design of bioresorbable bioelectronics.
-							While exploring these interests, I participated in two major engineering design projects where I interacted directly with clients to build user-centric solutions: a <strong>Retinopathy of Prematurity (ROP) Screening Device</strong> for clinics
-							in Kenya and an <strong>Adaptive Assist Device</strong> for local fiber artists. In both instances, I collaborated with end-users to design products that specifically addressed their physical environments and accessibility needs.
-							<br /><br />
-							I am super excited to see where my career journey takes me next!
-							</section>
-			
+        <div id="main">
+                        
+                        <section class="portfolio-intro">
+                            <div class="hero-section">
+                                <img src="images/others/main1.jpg" alt="Sherry Choi Headshot" class="hero-img" />
+                                <div class="hero-text">
+                                    <h1>Hi, I’m Sherry Choi.</h1>
+                                    <p>A <strong>Mechanical Engineering</strong> student at Rice University minoring in Engineering Design. I specialize in <strong>human-centered design</strong> for medical and vehicle applications, where thoughtful engineering directly shapes the user experience.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="experience-grid">
+                                
+                                <div class="experience-card">
+                                    <h3>Manufacturing</h3>
+                                    <ul>
+                                        <li>Fabricate and integrate composite battery enclosure components for a competition electric vehicle</li>
+                                        <li>Train students in MIG and arc welding as a Welding Lab Teaching Assistant</li>
+                                        <li>Develop rapid 3D-printed prototypes to iterate designs prior to final fabrication</li>
+                                    </ul>
+                                    <div class="skills-section">
+                                        <strong>Skills:</strong> DFM &middot; SolidWorks &middot; MIG & arc welding &middot; 3D printing &middot; Laser cutting &middot; Waterjet &middot; Structural evaluation &middot; Machine shop operations
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-card">
+                                    <h3>Product Design</h3>
+                                    <ul>
+                                        <li>Designed a wearable force-sensing cuff for an exoskeleton system with integrated PCB architecture</li>
+                                        <li>Designed and validated a ROP screening device for clinics in Kenya</li>
+                                        <!-- <li>Developed a one-handed assistive device through structured user testing</li> -->
+                                        <li>Improved 6-DoF robotic arm positioning accuracy via coordinate transformation algorithms</li>
+                                    </ul>
+                                    <div class="skills-section">
+                                        <strong>Skills:</strong> Human-centered design &middot; CAD (SolidWorks, Onshape) &middot; Mechanism design &middot; PCB design &middot; Rapid prototyping &middot; System & user validation
+                                    </div>
+                                </div>
+                        
+                                <div class="experience-card">
+                                    <h3>Simulation & Testing</h3>
+                                    <ul>
+                                        <li>Performed 25+ FEA iterations on magnesium serpentine interconnects for bioresorbable bioelectronics</li>
+                                        <li>Conducted tensile and cyclic testing on self-healing polymers to characterize durability and failure modes</li>
+                                    </ul>
+                                    <div class="skills-section">
+                                        <strong>Skills:</strong> FEA (Abaqus, COMSOL, Ansys) &middot; MATLAB &middot; Python &middot; Instron tensile testing &middot; Failure mode analysis &middot; Material characterization
+                                    </div>
+                                </div>
+                                
+                            </div> <p style="text-align: center; font-size: 1.15em; color: #555; margin-top: 2em; line-height: 1.6;">
+                                Feel free to explore my <a href="work.html"><strong>Professional Experience</strong></a> and <a href="rice.html"><strong>Design Projects</strong></a> for a deeper dive into my work. 
+                                <br>I am excited to see where my engineering journey takes me next!
+                            </p>
+                        </section>
+            
+                    <!-- <section id="two" style="max-width: 1000px; margin: 0 auto; padding: 2em;">
+                        <header class="major"></header>
+                        <div class="row">
+                            <article class="col-4 col-12-xsmall project-item">
+                                <a href="work.html" class="image fit thumb"><img src="images/weld/weld4.jpg" alt="" /></a>
+                                <a href="work.html">
+                                <h3 style="font-weight: bold; text-align: center; font-size: 1.1em; color:#031130">Professional Experience</h3> </a>
+                            </article>
+                            <article class="col-4 col-12-xsmall project-item">
+                                <a href="rice.html" class="image fit thumb"><img src="images/hydrogel/hydrogel3.JPG" alt="" /></a>
+                                <a href="rice.html">
+                                <h3 style="font-weight: bold; text-align: center; font-size: 1.1em; color:#031130">Design Projects</h3> </a>
+                            </article>
+                            <article class="col-4 col-12-xsmall project-item">
+                                <a href="others.html" class="image fit thumb"><img src="images/rop/rop3.JPG" alt="" /></a>
+                                <a href="others.html">
+                                <h3 style="font-weight: bold; text-align: center; font-size: 1.1em; color:#031130">Beyond Engineering</h3> </a>
+                            </article>                                                                          
+                        </div>
+                    </section> -->
 
-					<section id="two">
-						<header class="major"></header>
-						<div class="row">
-							<article class="col-4 col-12-xsmall project-item">
-								<a href="work.html" class="image fit thumb"><img src="images/weld/weld4.jpg" alt="" /></a>
-								<a href="work.html">
-								<h3 style="font-weight: bold; text-align: center; font-size: 1.1em; color:#031130">Professional Experience</h3> </a>
-							</article>
-							<article class="col-4 col-12-xsmall project-item">
-								<a href="rice.html" class="image fit thumb"><img src="images/hydrogel/hydrogel3.JPG" alt="" /></a>
-								<a href="rice.html">
-								<h3 style="font-weight: bold; text-align: center; font-size: 1.1em; color:#031130">Design Projects</h3> </a>
-							</article>
-							<article class="col-4 col-12-xsmall project-item">
-								<a href="others.html" class="image fit thumb"><img src="images/rop/rop3.JPG" alt="" /></a>
-								<a href="others.html">
-								<h3 style="font-weight: bold; text-align: center; font-size: 1.1em; color:#031130">Beyond Engineering</h3> </a>
-							</article>																		
-						</div>
-					</section>
+            </div>
 
-			</div>
-
-		<!-- Footer -->
-<footer id="page-footer">
+        <footer id="page-footer">
     <div class="inner">        
-            <h2 style="font-weight:500; margin-bottom: 1.5em;">Get In Touch</h2>
+            <h2 style="font-weight:500; margin-bottom: 1.5em; color:#e3dbdb">Get In Touch</h2>
             
             <ul class="labeled-icons" style="padding-left: 0; list-style: none;">
                 <li>
@@ -244,7 +373,7 @@
                     <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
                     <a href="mailto:sc233@rice.edu">sc233@rice.edu</a>
                 </li>
-				<li>
+                <li>
                     <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
                     <a href="https://github.com/SherryChooi">GitHub</a>
                 </li>
@@ -257,23 +386,20 @@
         </div>
 </footer>
 
-	
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-			<script>
-			AOS.init({
-				duration: 1000,   // Animation lasts 1000ms (1 second)
-				once: true,       // Animation happens only once (doesn't reset when scrolling up)
-				offset: 100,      // Triggers 100px before the element is visible
-			});
-			</script>
-	</body>
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.poptrox.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+            AOS.init({
+                duration: 1000,   // Animation lasts 1000ms (1 second)
+                once: true,       // Animation happens only once (doesn't reset when scrolling up)
+                offset: 100,      // Triggers 100px before the element is visible
+            });
+            </script>
+    </body>
 </html>
