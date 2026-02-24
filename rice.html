@@ -1,19 +1,14 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Sherry Choi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <head>
+        <title>Sherry Choi</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-		<style>
+        <style>
     strong {
         color: #000000 !important; /* Forces all bold text to be Pitch Black */
     }
@@ -65,6 +60,13 @@
     color: #aebce0 !important; /* Light Blue on hover */
 }
 
+.work-item p {
+    font-size: 0.9em !important;    /* Resets it to normal reading size */
+    line-height: 1.5em;           /* Gives it breathing room */
+    margin-top: 0.5em;            /* Adds a little space below the title */
+    color: #676767;               /* Matches your other text color */
+}
+
 /* Mobile Adjustment to make sure it looks good on phones */
 @media screen and (max-width: 736px) {
     #sticky-nav {
@@ -78,7 +80,7 @@
     }
 }
 </style>
-	<style>
+    <style>
         .project-item {
             margin: 0 0 2em 0;
         }
@@ -93,7 +95,7 @@
         .project-item a {
             border-bottom: none; 
         }
-		#header {
+        #header {
         position: relative;      /* Moves it into the normal flow */
         width: 100%;            /* Stretches it across the top */
         height: auto;
@@ -106,27 +108,27 @@
          background-position: center center !important; /* Focuses on the middle of the image */
          background-repeat: no-repeat !important;
 }
-		
-		#header .inner {
-			max-width: 100%;
-			margin: 0 auto;
-		}
-		body{
-			display: flex;
-			flex-direction: column;
-		}
-		#main {
-			
+        
+        #header .inner {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #main {
+            
             flex: 1 0 auto;
             margin-left: 0;
             max-width: 100%;  /* This unlocks the full width */
             padding: 0em;
             margin: 0 auto;
 
-		}
-		
+        }
+        
 
-		#page-footer {
+        #page-footer {
         color: #e3dbdb;
         flex-shrink: 0;
         display: block !important;
@@ -143,18 +145,18 @@
         /* ----------------------- */
 }
 
-		ul.actions a.button:hover {
+        ul.actions a.button:hover {
         color: #aebce0 !important;        /* SaddleBrown Text */
         border-color: #aebce0 !important; /* SaddleBrown Border */
     }
 
-    	ul.actions a.button:active {
+        ul.actions a.button:active {
         color: #aebce0 !important;
         border-color: #aebce0 !important;
         background-color: rgba(139, 69, 19, 0.1) !important; /* Optional: Faint brown tint background */
     }
-	
-		@media screen and (max-width: 980px) {
+    
+        @media screen and (max-width: 980px) {
         #header {
             background-attachment: scroll; /* Fixes mobile scrolling glitch */
         }
@@ -163,9 +165,57 @@
         }
     }
 
+    /* ========================================= */
+    /* --- NEW ACCORDION / DROPDOWN STYLES --- */
+    /* ========================================= */
+    
+    .exp-wrapper {
+        margin-bottom: 1.5em;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 1px solid #eaeaea;
+        overflow: hidden;
+    }
+
+    .exp-header {
+        cursor: pointer;
+        padding: 1.5em 2.5em 1.5em 1.5em; /* Extra right padding for the arrow */
+        background-color: #fdfdfd;
+        position: relative;
+        transition: background-color 0.2s ease;
+    }
+
+    .exp-header:hover {
+        background-color: #f2f5fa;
+    }
+
+    /* The Dropdown Arrow */
+    .exp-header::after {
+        content: '▼';
+        position: absolute;
+        right: 1.5em;
+        top: 2em; /* Align roughly with the title */
+        font-size: 1.2em;
+        color: #031130;
+        transition: transform 0.3s ease;
+    }
+
+    /* Rotate arrow when open */
+    .exp-header.active::after {
+        transform: rotate(-180deg);
+    }
+
+    /* Hidden content area */
+    .exp-content {
+        display: none; 
+        padding: 1em 1.5em 2em 1.5em;
+        border-top: 1px solid #eaeaea;
+    }
+
     </style>
-	</head>
-	<body class="is-preload">
+    </head>
+    <body class="is-preload">
 
         <nav id="sticky-nav">
             <ul class="actions" data-aos="fade-up">
@@ -174,314 +224,334 @@
                 <li><a href="rice.html">Design Projects</a></li>
                 <li><a href="others.html">Beyond Engineering</a></li>
             </ul>
-            </nav>  
+        </nav>  
+        
     <header id="header">
-        <div class="inner">
+        <div class="inner">            
         </div>
     </header>
 
-		<!-- Main -->
-		<div id="main">
-			<header class="major">
-				<h3 style="font-weight: bold; font-size: 2em; margin-bottom: 0; color:#343333;  font-family: 'Noto Sans', sans-serif;"> 
-    						<br>
-								Design Projects </h3>
-							<br/>
-				<header class="major">
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					EV Battery Manufacturing </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Rice Electric Vehicle Team
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Houston, TX | Jan 2025 - Present </h4>  
-				</header>
+        <div id="main">
+            <header class="major" style="padding: 0 1em;">
+                <h3 style="font-weight: bold; font-size: 2em; margin-bottom: 1em; color:#343333;  font-family: 'Noto Sans', sans-serif; text-align: center;"> 
+                    <br></br>
+					Design Projects 
+                </h3>
+            </header>
 
-				<p style="color: #676767; font-size: 1.07em;">
-				I am contributing to the development of <strong>Rice Carrera</strong>, Rice University’s first-ever entry for the American Solar Challenge and Formula Sun Grand Prix. To accelerate our debut, we are collaborating with École de technologie supérieure (ETS) to adapt their Eclipse X prototype architecture. We are currently in the <strong>rapid manufacturing phase</strong> to meet a July 2026 competition deadline, specifically engineering a bespoke, regulation-compliant energy storage and motor drive system.
-				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				My role centers on the <strong>hands-on fabrication and assembly</strong> of the car’s battery enclosure. With the competition only months away, I am currently implementing a design inspired by Stanford’s open-source battery pack, which utilizes polymer composites and sandwich panel structures for optimal strength-to-weight ratios. I am actively using additive manufacturing to fast-track the integration of battery modules, ensuring the system remains on schedule for rigorous pre-race safety inspections.				
-				</p>
+                <div style="max-width: 1000px; margin: 0 auto; padding: 0 1em;">
+                    
+                    <div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em;  color:#031130"> 
+                           EV Battery Manufacturing</h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Rice Electric Vehicle Team 
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Houston, TX | Jan 2025 - Present</h4>    
+                        </div>
 
-				<div class="row">
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/rev/rev2.png" class="image fit thumb"><img src="images/rev/rev2.png" alt="" /></a>
-						<h3>Solar Car Design</h3>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/rev/rev1.png" class="image fit thumb"><img src="images/rev/rev1.png" alt="" /></a>
-						<h3>Open Source Battery Pack</h3>
-					</article>
-				</div>
-		
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;" >
+                               I am contributing to the development of <strong>Rice Carrera</strong>, Rice University’s first-ever entry for the American Solar Challenge and Formula Sun Grand Prix. To accelerate our debut, we are collaborating with École de technologie supérieure (ETS) to adapt their Eclipse X prototype architecture. We are currently in the <strong>rapid manufacturing phase</strong> to meet a July 2026 competition deadline, specifically engineering a bespoke, regulation-compliant energy storage and motor drive system.
+                			<br></br>
+							   My role centers on the <strong>hands-on fabrication and assembly</strong> of the car’s battery enclosure. With the competition only months away, I am currently implementing a design inspired by Stanford’s open-source battery pack, which utilizes polymer composites and sandwich panel structures for optimal strength-to-weight ratios. I am actively using additive manufacturing to fast-track the integration of battery modules, ensuring the system remains on schedule for rigorous pre-race safety inspections.                
+							</p>
+                            <div class="row" >  
+                                <article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/rev/rev2.png" class="image fit thumb"><img src="images/rev/rev2.png" alt="" /></a>
+                                    <h3>Solar Car Design</h3>
+                                </article>
+                                <article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/rev/rev1.png" class="image fit thumb"><img src="images/rev/rev1.png" alt="" /></a>
+                                    <h3>Open Source Battery Pack</h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
 
-			<div data-aos="fade-up">
-				<header class="major">
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					Retinopathy of Prematurity Screening Device </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					International Summer Experience in Engineering Design 
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Nairobi, Kenya | Jun 2025 - Jul 2025 </h4>  
-				</header>
+                    <div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            Retinopathy of Prematurity Screening Device</h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            International Summer Experience in Engineering Design 
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Nairobi, Kenya | Jun 2025 - Jul 2025</h4>    
+                        </div>
 
-				<p style="color: #676767; font-size: 1.07em;">
-				For my first overseas engineering project, I traveled to <strong>Nairobi, Kenya</strong>, to address the critical lack of accessible <strong>Retinopathy of Prematurity (ROP)</strong> screening tools in <strong>resource-constrained clinics</strong>. After visiting six hospitals and identifying that the reliance on specialists caused dangerous delays in diagnosis, my goal was to design a <strong>low-cost device</strong> that enabled nurses to capture diagnostic images independently.				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				I spearheaded the <strong>mechanical design and rapid prototyping</strong>, utilizing <strong>3D-printed PLA</strong> to engineer an <strong>adjustable phone-based imaging mount</strong> capable of linear translation for precise optical alignment. I integrated a dimensionally verified neck support based on <strong>neonatal anthropometry</strong> and designed the optical housing to theoretically accommodate a standard <strong>20D lens geometry</strong>.				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				While my teammates developed image-qualification software to facilitate remote diagnosis, I delivered a <strong>functional physical prototype</strong> that we demonstrated at Kenyatta University, where the project’s software component ultimately won <strong>first place</strong> in the <strong>2025 Invention Education Design Challenge</strong>.
-				</p>
-
-				<div class="row">
-					<article class="col-12 col-12-xsmall work-item">
-						<a href="images/rop/rop12.png" class="image fit thumb"><img src="images/rop/rop12.png" alt="" /></a>
-						<h3>Mechanical Component Design</h3>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/rop/rop3.JPG" class="image fit thumb"><img src="images/rop/rop3.JPG" alt="" /></a>
-						<h3>Onsite Visits in Kenyan Hospitals</h3>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/rop/rop 1.JPG" class="image fit thumb"><img src="images/rop/rop 1.JPG" alt="" /></a>
-						<h3>Poster Presentation at Kenyatta University</h3>
-					</article>  
-
-				</div> </div> <div data-aos="fade-up">
-				<header class="major">
-					<br/><br/>
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					Adaptive Assist Device for Fiber Artists </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Oshman Engineering Design Kitchen 
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Houston, TX | Sep 2024 - Dec 2024 </h4> 
-				</header>
-
-				<p style="color: #676767; font-size: 1.07em;">
-				Our goal was to help a fiber artist who had injured her hand continue <strong>spinning yarn independently</strong>. Because spinning normally requires two hands, we learned there were <strong>no existing assistive tools</strong> designed for one-handed fiber artists. Through early conversations with our client, we established key design criteria focused on <strong>safety, portability, ease of control</strong>, and compatibility with a range of fiber types.
-				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				During the development process, we observed her spinning workflow, identified the specific hand motions involved, and looked outside the field for mechanical analogies. I focused on the <strong>mechanical design and prototyping</strong>, taking inspiration from <strong>one-handed fishing mechanisms</strong> to create a structure that supports twisting, gripping, and <strong>controlled drafting</strong>. Much of my work centered on translating these motions into simple mechanical features that could be operated with a single hand.
-				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				As a result, we created a <strong>portable assistive device</strong> that allowed our client to continue spinning fiber into yarn using only one hand. The prototype demonstrated that thoughtful mechanical support can enable users to <strong>return to meaningful hobbies</strong> after injury, and highlighted how engineering can directly improve quality of life through <strong>personalized design</strong>.
-				</p>
-				
-				<div class="row">   
-					<article class="col-12 col-12-xsmall work-item">
-						<a href="images/adaptive/adaptive4.png" class="image fit thumb"><img src="images/adaptive/adaptive4.png" alt="" /></a>
-						<h3>Adaptive Assist Device for Fiber Drafting</h3>              
-					</article>
-				</div>
-			</div>
-
-			<div data-aos="fade-up">
-				<header class="major">
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					DIY Motor </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Intro to Mechatronics Course Project
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Houston, TX | Jan 2026 </h4>  
-				</header>
-
-				<p style="color: #676767; font-size: 1.07em;">
-				For a foundational course project, I co-developed a <strong>DIY series-wound DC motor</strong> integrated with a fan to demonstrate electromagnetic principles and basic control logic through a visual "spinning art" effect. I led the <strong>CAD design and mechanical modeling</strong> for the motor housing and fan assembly while providing cross-functional support to my electrical teammates during the winding and assembly phases. This project served as a hands-on introduction to motor topology and system integration, building the technical intuition necessary for upcoming mechatronics projects.				</p>
-				</p>
-
-				<div class="row">
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/motor/motor1.png" class="image fit thumb"><img src="images/motor/motor1.png" alt="" /></a>
-						<h3>CAD Design</h3>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/motor/motor2.png" class="image fit thumb"><img src="images/motor/motor2.png" alt="" /></a>
-						<h3>DC Motor</h3>
-					</article>
-				</div>
-			</div>	
-			<div data-aos="fade-up">
-				<header class="major">
-					<br/><br/>
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					Custom-Made Hammer </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Industrial Processing Lab
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Houston, TX | Jan 2025 - May 2025 </h4> 
-				</header>
-				<p style="color: #676767; font-size: 1.07em;">
-					As part of my <strong>Industrial Processing Lab</strong> course, I learned the fundamentals of machining by <strong>fabricating a custom hammer</strong> from <strong>raw steel, aluminum, copper, and plastic</strong>.
-					Working directly from a <strong>technical drawing</strong>, I machined every component using <strong>milling, turning, and precision measurement</strong>, slowly transforming raw stock into a fully functional tool. The final product serves as a tangible demonstration of my proficiency in <strong>metalworking and manufacturing processes</strong>, as well as my attention to <strong>functional design and material integration</strong>.
-				</p>                      
-				<div class="row">  
-					<article class="col-4 col-12-xsmall work-item">
-						<a href="images/others/hammer.jpg" class="image fit thumb"><img src="images/others/hammer.jpg" alt="" /></a>
-						<h3>Hammer</h3>
-					</article>
-				</div>
-			</div>
-
-			<div data-aos="fade-up">
-				<header class="major">
-					<br/><br/>
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					Robo-Cat </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Rice Robotics Club R&D      
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Houston, TX | Sep 2025 - Present </h4>  
-				</header>
-				<p style="color: #676767; font-size: 1.07em;">
-				As part of the <strong>Rice Robotics Club R&D team</strong>, we’re developing a <strong>robotic cat</strong> that <strong>mimics feline jumping</strong> through a <strong>multi-linkage leg system</strong>. Our goal is to understand how <strong>biological motion</strong> can be recreated using lightweight mechanisms and compact actuation.
-				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				I’ve been primarily responsible for the <strong>hip-joint assembly</strong>, integrating the <strong>layered gear system</strong>, bearings, and internal wiring to drive the linkage motion while keeping mass low. Much of my work focuses on <strong>packaging components</strong> like actuators and gears within a small chassis, ensuring <strong>smooth rotation</strong>, <strong>reduced inertia</strong>, and <strong>reliable transmission</strong> during jump cycles.
-				</p>                                    
-				<div class="row">  
-					<article class="col-12 col-12-xsmall work-item">
-						<a href="images/robo/robo0.png" class="image fit thumb"><img src="images/robo/robo0.png" alt="" /></a>
-						<h3>Robo-Cat</h3>
-					</article>          
-				</div>
-			</div>
-
-			<div data-aos="fade-up">
-				<header class="major">
-					<br/><br/>
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					Wind Turbine Generator </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Rice Wind Club
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Houston, TX | Jan 2024 - Dec 2024 </h4> 
-				</header>
-				<p style="color: #676767; font-size: 1.07em;">
-				In this project, I focused on the <strong>generator subsystem</strong> of the <strong>wind turbine</strong>, experimenting with <strong>coil configurations</strong>, <strong>magnet types</strong>, and magnet counts to <strong>maximize power output</strong>. I evaluated different wiring arrangements and tested how coil geometry and magnet spacing affected <strong>induced voltage</strong>.
-				</p>
-				<p style="color: #676767; font-size: 1.07em;">
-				Based on these results, I contributed to the <strong>design of the generator housing</strong> and <strong>integrated the generator</strong> with the main turbine assembly so it <strong>mechanically mates</strong> with the pitch system and rotating shaft. This work gave me hands-on experience in <strong>electromagnetic design</strong>, <strong>prototyping</strong>, and <strong>component integration</strong> within a larger mechanical system.
-				</p>    
-				<div class="row">                      
-					<article class="col-12 col-12-xsmall work-item">
-						<a href="images/wind/wind0.png" class="image fit thumb"><img src="images/wind/wind0.png" alt="" /></a>
-						<h3>Wind Turbine Generator</h3>
-					</article>
-					<article class="col-12 col-12-xsmall work-item">
-						<a href="images/wind/wind0.1.png" class="image fit thumb"><img src="images/wind/wind0.1.png" alt="" /></a>
-						<h3>Team Photo & Wind Tunnel Testing</h3>
-					</article>              
-				</div>
-			</div>
-
-			<div data-aos="fade-up">
-				<header class="major">
-					<br/><br/>
-					<h3 class="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0; color:#031130"> 
-					FIRST Tech Challenge 2021/22 </h3>
-					<h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
-					Inspire Award Winner
-					</h4> <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
-					Hong Kong | Jan 2024 - Dec 2024 </h4>   
-				</header>
-				
-				<p style="color: #676767; font-size: 1.07em;">
-				As part of a <strong>high school robotics team</strong>, I <strong>co-designed and built</strong> the <strong>mechanical systems</strong> for a <strong>competition robot</strong> capable of <strong>block collection and positioning tasks</strong>. I improved the <strong>intake system's accuracy and efficiency</strong> by proposing a <strong>custom halved-tube design</strong> that <strong>increased surface friction</strong> during operation.				
-				Our team was awarded the <strong>Inspire Award</strong>, the <strong>highest regional recognition</strong>, for <strong>excellence in engineering, innovation, and team collaboration</strong>.</p>    
-
-				<div class="row">                                       
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/first/first1.png" class="image fit thumb"><img src="images/first/first1.png" alt="" /></a>
-						<h3>Robot Side View 1</h3>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/first/first2.png" class="image fit thumb"><img src="images/first/first2.png" alt="" /></a>
-						<h3>Robot Side View 2</h3>
-					</article>              
-				</div>
-			</div>
-		</div>
-	<!-- Footer -->
-			<footer id="page-footer">
-    <div class="inner">
-        
-        <div data-aos="fade-up"> 
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;" >
+                               For my first overseas engineering project, I traveled to <strong>Nairobi, Kenya</strong>, to address the critical lack of accessible <strong>Retinopathy of Prematurity (ROP)</strong> screening tools in <strong>resource-constrained clinics</strong>. After visiting six hospitals and identifying that the reliance on specialists caused dangerous delays in diagnosis, my goal was to design a <strong>low-cost device</strong> that enabled nurses to capture diagnostic images independently.              
+							<br> </br>
+                			I spearheaded the <strong>mechanical design and rapid prototyping</strong>, utilizing <strong>3D-printed PLA</strong> to engineer an <strong>adjustable phone-based imaging mount</strong> capable of linear translation for precise optical alignment. I integrated a dimensionally verified neck support based on <strong>neonatal anthropometry</strong> and designed the optical housing to theoretically accommodate a standard <strong>20D lens geometry</strong>.                
+							<br> </br>
+                			While my teammates developed image-qualification software to facilitate remote diagnosis, I delivered a <strong>functional physical prototype</strong> that we demonstrated at Kenyatta University, where the project’s software component ultimately won <strong>first place</strong> in the <strong>2025 Invention Education Design Challenge</strong>.
+							</p>
+                            <div class="row">   
+                                <article class="col-12 col-12-xsmall work-item">
+                                    <a href="images/rop/rop12.png" class="image fit thumb"><img src="images/rop/rop12.png" alt="" /></a>
+                                    <h3>Mechanical Component Design</h3>
+                                </article>
+                                <article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/rop/rop3.JPG" class="image fit thumb"><img src="images/rop/rop3.JPG" alt="" /></a>
+                                    <h3>Onsite Visits in Kenyan Hospitals</h3>
+                                </article>     
+								<article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/rop/rop 1.JPG" class="image fit thumb"><img src="images/rop/rop 1.JPG" alt="" /></a>
+                                    <h3>Poster Presentation at Kenyatta University</h3>
+                                </article>                  
+                            </div>
+                        </div>
+                    </div>
             
-            <h2 style="font-weight:500; margin-bottom: 1.5em;">Get In Touch</h2>
-            
-            <ul class="labeled-icons" style="padding-left: 0; list-style: none;">
-                <li>
-                    <h3 class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></h3>
-                    <a href="https://www.linkedin.com/in/sherry-choi-sc233/">LinkedIn</a>
-                </li>
-                <li>
-                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-                    <a> +1 281-814-0559</a>
-                </li>
-                <li>
-                    <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                    <a href="mailto:sc233@rice.edu">sc233@rice.edu</a>
-                </li>
-				<li>
-                    <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
-                    <a href="https://github.com/SherryChooi">GitHub</a>
-                </li>
-            </ul>
+                    <div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            Adaptive Assist Device for Fiber Artists </h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Intro to Engineering Design Course Project 
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Houston, TX | Sep 2024 - Dec 2024 </h4>  
+                        </div>
 
-            <ul class="copyright" style="padding-left: 0; margin-top: 3em; color: #343333;">
-                &copy; Sherry Choi | Design: <a href="http://html5up.net" style="color: #343333;">HTML5 UP</a>
-            </ul>
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;" >
+                            Our goal was to help a fiber artist who had injured her hand continue <strong>spinning yarn independently</strong>. Because spinning normally requires two hands, we learned there were <strong>no existing assistive tools</strong> designed for one-handed fiber artists. Through early conversations with our client, we established key design criteria focused on <strong>safety, portability, ease of control</strong>, and compatibility with a range of fiber types.
+							<br></br>
+							During the development process, we observed her spinning workflow, identified the specific hand motions involved, and looked outside the field for mechanical analogies. I focused on the <strong>mechanical design and prototyping</strong>, taking inspiration from <strong>one-handed fishing mechanisms</strong> to create a structure that supports twisting, gripping, and <strong>controlled drafting</strong>. Much of my work centered on translating these motions into simple mechanical features that could be operated with a single hand.
+               				<br></br>
+							As a result, we created a <strong>portable assistive device</strong> that allowed our client to continue spinning fiber into yarn using only one hand. The prototype demonstrated that thoughtful mechanical support can enable users to <strong>return to meaningful hobbies</strong> after injury, and highlighted how engineering can directly improve quality of life through <strong>personalized design</strong>.
+            				</p>
+                            <div class="row">                   
+                                <article class="col-12 col-12-xsmall work-item">
+                                    <a href="images/adaptive/adaptive4.png" class="image fit thumb"><img src="images/adaptive/adaptive4.png" alt="" /></a>
+                                    <h3>Adaptive Assist Device for Fiber Drafting</h3>
+                                </article>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            DIY Motor</h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Intro to Mechatronics Course Project
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Houston, TX | Jan 2026</h4>   
+                        </div>
 
-        </div>
-    </div>
-</footer>
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;">
+                            For a foundational course project, I co-developed a <strong>DIY series-wound DC motor</strong> integrated with a fan to demonstrate electromagnetic principles and basic control logic through a visual "spinning art" effect. I led the <strong>CAD design and mechanical modeling</strong> for the motor housing and fan assembly while providing cross-functional support to my electrical teammates during the winding and assembly phases. This project served as a hands-on introduction to motor topology and system integration, building the technical intuition necessary for upcoming mechatronics projects.            
+							</p>
+                            <div class="row" >  
+                                <article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/motor/motor1.png" class="image fit thumb"><img src="images/motor/motor1.png" alt="" /></a>
+                                    <h3>CAD Design</h3>
+                                </article>
+                                <article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/motor/motor2.png" class="image fit thumb"><img src="images/motor/motor2.png" alt="" /></a>
+                                    <h3>DC Motor </h3>
+                                </article>  
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            Custom-Made Hammer </h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Industrial Processing Lab
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Houston, TX | Jan 2025 - May 2025 </h4>   
+                        </div>
+
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;" >
+                            As part of my <strong>Industrial Processing Lab</strong> course, I learned the fundamentals of machining by <strong>fabricating a custom hammer</strong> from <strong>raw steel, aluminum, copper, and plastic</strong>. Working directly from a <strong>technical drawing</strong>, I machined every component using <strong>milling, turning, and precision measurement</strong>, slowly transforming raw stock into a fully functional tool. The final product serves as a tangible demonstration of my proficiency in <strong>metalworking and manufacturing processes</strong>, as well as my attention to <strong>functional design and material integration</strong>.
+							</p>
+                            <div class="row" >  
+                                <article class="col-4 col-12-xsmall work-item">
+                                    <a href="images/others/hammer.jpg" class="image fit thumb"><img src="images/others/hammer.jpg" alt="" /></a>
+                                    <h3>Hammer</h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            Robo-Cat </h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Rice Robotics Club R&D
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Houston, TX | Sep 2025 - Dec 2025 </h4>   
+                        </div>
+
+					<div class="exp-content">
+						<p style="color: #676767; font-size: 1.07em;" >
+						As part of the <strong>Rice Robotics Club R&D team</strong>, we’re developing a <strong>robotic cat</strong> that <strong>mimics feline jumping</strong> through a <strong>multi-linkage leg system</strong>. Our goal is to understand how <strong>biological motion</strong> can be recreated using lightweight mechanisms and compact actuation.
+						<br></br>
+						I’ve been primarily responsible for the <strong>hip-joint assembly</strong>, integrating the <strong>layered gear system</strong>, bearings, and internal wiring to drive the linkage motion while keeping mass low. Much of my work focuses on <strong>packaging components</strong> like actuators and gears within a small chassis, ensuring <strong>smooth rotation</strong>, <strong>reduced inertia</strong>, and <strong>reliable transmission</strong> during jump cycles.
+						</p>   							
+						<div class="row" >  
+							<article class="col-12 col-12-xsmall work-item">
+								<a href="images/robo/robo0.png" class="image fit thumb"><img src="images/robo/robo0.png" alt="" /></a>
+								<h3>Robo-Cat</h3>
+							</article>
+						</div>
+					</div>
+				</div>
+
+				<div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            Wind Turbine Generator</h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Rice Wind Club
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Houston, TX | Jan 2024 - Dec 2024 </h4>   
+                        </div>
+
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;" >
+                            In this project, I focused on the <strong>generator subsystem</strong> of the <strong>wind turbine</strong>, experimenting with <strong>coil configurations</strong>, <strong>magnet types</strong>, and magnet counts to <strong>maximize power output</strong>. I evaluated different wiring arrangements and tested how coil geometry and magnet spacing affected <strong>induced voltage</strong>.
+							<br></br>
+							Based on these results, I contributed to the <strong>design of the generator housing</strong> and <strong>integrated the generator</strong> with the main turbine assembly so it <strong>mechanically mates</strong> with the pitch system and rotating shaft. This work gave me hands-on experience in <strong>electromagnetic design</strong>, <strong>prototyping</strong>, and <strong>component integration</strong> within a larger mechanical system.
+							<br></br>
+                            <div class="row" >  
+                                <article class="col-12 col-12-xsmall work-item">
+                                    <a href="images/wind/wind0.png" class="image fit thumb"><img src="images/wind/wind0.png" alt="" /></a>
+                                    <h3>Wind Turbine Generator</h3>
+                                </article>
+								<article class="col-12 col-12-xsmall work-item">
+                                    <a href="images/wind/wind0.1.png" class="image fit thumb"><img src="images/wind/wind0.1.png" alt="" /></a>
+                                    <h3>Team Photo & Wind Tunnel Testing</h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+				
+					<div class="exp-wrapper" data-aos="fade-up">
+                        <div class="exp-header">
+                            <h3 class ="title-box" style="font-weight: bold; font-size: 1.5em; margin-bottom: 0.2em; color:#031130"> 
+                            FIRST Tech Challenge 2021/22</h3>
+                            <h4 style="margin-top: 0; margin-bottom: 0; color: #444;"> 
+                            Inspire Award Winner
+                            </h4>
+                            <h4 style="font-style: italic; margin-top: 0; color: #666;"> 
+                            Hong Kong | Jan 2021 - Apr 2022 </h4>   
+                        </div>
+
+                        <div class="exp-content">
+                            <p style="color: #676767; font-size: 1.07em;" >
+                            As part of a <strong>high school robotics team</strong>, I <strong>co-designed and built</strong> the <strong>mechanical systems</strong> for a <strong>competition robot</strong> capable of <strong>block collection and positioning tasks</strong>. I improved the <strong>intake system's accuracy and efficiency</strong> by proposing a <strong>custom halved-tube design</strong> that <strong>increased surface friction</strong> during operation.            
+               				Our team was awarded the <strong>Inspire Award</strong>, the <strong>highest regional recognition</strong>, for <strong>excellence in engineering, innovation, and team collaboration</strong>.
+							</p>
+                            <div class="row" >  
+                                <article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/first/first1.png" class="image fit thumb"><img src="images/first/first1.png" alt="" /></a>
+                                    <h3>Robot Side View 1</h3>
+                                </article>
+								<article class="col-6 col-12-xsmall work-item">
+                                    <a href="images/first/first2.png" class="image fit thumb"><img src="images/first/first2.png" alt="" /></a>
+                                    <h3>Robot Side View 2</h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> </div>
+
+        <footer id="page-footer">
+            <div class="inner">
+                <div data-aos="fade-up"> 
+                    <h2 style="font-weight:500; margin-bottom: 1.5em; color:#e3dbdb">Get In Touch</h2>
+                    <ul class="labeled-icons" style="padding-left: 0; list-style: none;">
+                        <li>
+                            <h3 class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></h3>
+                            <a href="https://www.linkedin.com/in/sherry-choi-sc233/">LinkedIn</a>
+                        </li>
+                        <li>
+                            <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+                            <a> +1 281-814-0559</a>
+                        </li>
+                        <li>
+                            <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                            <a href="mailto:sc233@rice.edu">sc233@rice.edu</a>
+                        </li>
+                        <li>
+                            <h3 class="icon brands fa-github"><span class="label">GitHub</span></h3>
+                            <a href="https://github.com/SherryChooi">GitHub</a>
+                        </li>
+                    </ul>
+                    <ul class="copyright" style="padding-left: 0; margin-top: 3em; color: #343333;">
+                        &copy; Sherry Choi | Design: <a href="http://html5up.net" style="color: #343333;">HTML5 UP</a>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
 
-			
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.poptrox.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
 
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // This targets your entire "main" div and activates the popup on images
+                    $('#main').poptrox({
+                        baseZIndex: 20000,
+                        caption: function($a) {
+                            // This grabs the text from the h3 tag immediately following the image
+                            return $a.next('h3').text();
+                        },
+                        fadeSpeed: 300,
+                        overlayColor: '#000000',
+                        overlayOpacity: 0.6,
+                        popupCloserText: '',
+                        popupLoaderText: '',
+                        selector: '.work-item a.image', // This looks for your specific link class
+                        usePopupCaption: true,
+                        usePopupDefaultStyling: false,
+                        usePopupEasyClose: false,
+                        usePopupNav: true,
+                        windowMargin: 50
+                    });
 
+                    // --- NEW ACCORDION / DROPDOWN LOGIC ---
+                    $('.exp-header').click(function() {
+                        // Toggles the 'active' class to flip the arrow
+                        $(this).toggleClass('active');
+                        // Smoothly slides the content up and down
+                        $(this).next('.exp-content').slideToggle(300);
+                    });
+                });
+            </script>
 
-			<script>
-				$(document).ready(function() {
-					// This targets your entire "main" div and activates the popup on images
-					$('#main').poptrox({
-						baseZIndex: 20000,
-						caption: function($a) {
-							// This grabs the text from the h3 tag immediately following the image
-							return $a.next('h3').text();
-						},
-						fadeSpeed: 300,
-						overlayColor: '#000000',
-						overlayOpacity: 0.6,
-						popupCloserText: '',
-						popupLoaderText: '',
-						selector: '.work-item a.image', // This looks for your specific link class
-						usePopupCaption: true,
-						usePopupDefaultStyling: false,
-						usePopupEasyClose: false,
-						usePopupNav: true,
-						windowMargin: 50
-					});
-				});
-			</script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+            AOS.init({
+                duration: 1000,   // Animation lasts 1000ms (1 second)
+                once: true,       // Animation happens only once (doesn't reset when scrolling up)
+                offset: 100,      // Triggers 100px before the element is visible
+            });
+            </script>
 
-			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-			<script>
-			AOS.init({
-				duration: 1000,   // Animation lasts 1000ms (1 second)
-				once: true,       // Animation happens only once (doesn't reset when scrolling up)
-				offset: 100,      // Triggers 100px before the element is visible
-			});
-			</script>
-
-	</body>
+    </body>
 </html>
